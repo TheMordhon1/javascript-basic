@@ -8,13 +8,21 @@
 <script>
 
     const person = {
+        name: {
+            firstName: "Muhamad",
+            lastName: "romdon"
+        },
         address: {
             country : "Indonesia"
         }
     };
 
-    let country = person?.address?.country;
 
+    const nickName = person.name.lastName;
+    /* Use optional chaining to make sure is the person and address are nullish */
+    const country = person?.address?.country;
+
+    /* optional chaining with if statement */
     // if(person.address !== undefined && person.address !== null){
     //     country = person.address.country;
     // }
@@ -22,6 +30,8 @@
     document.writeln(`SUKSES`);
 
     document.writeln(`<p>${country}</p>`);
+
+    document.writeln(`<p>${nickName}</p>`);
 
     document.writeln(`SUKSES`);
 

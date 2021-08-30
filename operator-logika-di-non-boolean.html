@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Operator Logika di Non Boolean</title>
-</head>
-<body>
-<script>
+  </head>
+  <body>
+    <script>
+      /* Operator Logika || akan mengambil nilai thruty dari kanan */
+      console.info("Hello" || ""); //thruty || falsy = Hello
+      console.info("" || []); // falsy || thruty = []
+      console.info("0" || "NOL"); //thruty || thruty = 0
+      console.info(0 || "NOL"); //falsy || thruty = NOL
+      console.info(null || "NULL"); //falsy || thruty = NULL
+      console.info(undefined || "UNDEFINED"); //falsy || thruty = UNDEFINED
+      console.info(0 || false); //falsy || falsy = false
 
-    console.info("Hello" || "");
-    console.info("" || []);
-    console.info("0" || "NOL");
-    console.info(0 || "NOL");
-    console.info(null || "NULL");
-    console.info(undefined || "UNDEFINED");
-    console.info(0 || false);
+      const person = {
+        firstName: "", //falsy
+        lastName: "Romdon", //thruty
+      };
 
-    const person = {
-        firstName: "",
-        lastName: "Khannedy"
-    };
+      const name = person.firstName || person.lastName;
+      console.info(name); // Romdon
 
-    const name = person.firstName || person.lastName;
-    console.info(name);
+      /* Operator Logika && akan mengambil nilai falsy dari kiri */
+      console.info("" && "0"); //falsy && thruty = <empty string>
+      console.info(["hello"] && "0"); //thruty && thruty = 0 (jika keduanya thruty maka nilai thruty paling kanan yg diambil)
+      console.info("NOL" && ""); //thruty && falsy = <empty string>
 
-    console.info("HELLO" && '');
-    console.info("" && []);
-    console.info("0" && "NOL");
-
-</script>
-</body>
+      const person = {
+        firstName: "", //falsy
+        lastName: "Romdon", //thruty
+      };
+      const namex = person.firstName && person.lastName;
+      console.info(namex); // <empty string>
+    </script>
+  </body>
 </html>

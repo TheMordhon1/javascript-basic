@@ -1,2 +1,1 @@
-
 document.writeln("Hello World");
