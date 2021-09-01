@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>For Of</title>
-</head>
-<body>
-<script>
-
-    const names = ["Eko", "Kurniawan", "Khannedy"];
-    for(const name of names){
+  </head>
+  <body>
+    <script>
+      /* For of "array" will itterated value of the index */
+      const names = ["Muhamad", "Romdon", "Mubarak"];
+      for (const name of names) {
         document.writeln(`<p>${name}</p>`);
-    }
+      }
 
-    const fullName = "Eko Kurniawan Khannedy";
-    for(const character of fullName){
+      /* For of "string" will itterated the lenght of character */
+      const fullName = "Muhamad Romdon Mubarak";
+      for (const character of fullName) {
         document.writeln(`<p>${character}</p>`);
-    }
-
-    // const person = {
-    //     firstName: "Eko",
-    //     lastName: "Khannedy"
-    // };
-    // for(const name of person){
-    //     document.writeln(`<p>${name}</p>`);
-    // }
-
-</script>
-</body>
+      }
+      /* For of "object" will impacting code error because object isn't itterable */
+      // const person = {
+      //     firstName: "Romdon",
+      //     lastName: "Mubarak"
+      // };
+      // for(const name of person){
+      //     document.writeln(`<p>${name}</p>`);
+      // }
+    </script>
+  </body>
 </html>

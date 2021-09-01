@@ -1,27 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>For In</title>
-</head>
-<body>
-<script>
+  </head>
+  <body>
+    <script>
+      /* For in Object */
+      const address = {
+        street: "Jl.Megamendung",
+        city: "Bogor",
+        region: "West Java",
+        country: "Indonesia",
+      };
+      const person = {
+        firstName: "Muhamad",
+        middleName: "Romdon",
+        lastName: "Mubarak",
+        nickName: "Themordhon",
+      };
 
-    const person = {
-        firstName: "EKo",
-        middleName: "Kurniawan",
-        lastName: "Khannedy"
-    };
+      document.writeln(`<h1>Hello ${person.nickName}</h1>
+      <h3>Here's your Profil</h3>`);
 
-    for(const property in person){
-        document.writeln(`<p>${property} : ${person[property]}</p>`);
-    }
+      for (const atribut in person) {
+        document.writeln(`<p>${atribut} : ${person[atribut]}</p>`);
+      }
 
-    const names = ["Eko", "Kurniawan", "Khannedy"];
-    for(const index in names){
-        document.writeln(`<p>${index} : ${names[index]}</p>`);
-    }
+      for (const atribut in address) {
+        document.writeln(`<p>${atribut} : ${address[atribut]}</p>`);
+      }
 
-</script>
-</body>
+      /* For in  Array*/
+      const names = ["Muhamad", "Romdon", "Mubarak"];
+      for (const urutanIndex in names) {
+        console.info(`${urutanIndex} : ${names[urutanIndex]}`);
+      }
+    </script>
+  </body>
 </html>
