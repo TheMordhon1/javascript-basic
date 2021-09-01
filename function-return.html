@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function sayHello(firstName, lastName) {
+        const say = `${firstName} ${lastName}`;
+        return say;
+      }
+
+      const resultSay = sayHello("Muhamad", "Romdon");
+      document.writeln(`<p>Hello ${resultSay}</p>`);
+
+      function getFinalScore(score) {
+        if (score > 90) {
+          return "A";
+        } else if (score > 80) {
+          return "B";
+        } else if (score > 70) {
+          return "C";
+        } else if (score > 55) {
+          return "D";
+        } else {
+          return "E";
+        }
+      }
+
+      const finalScore = getFinalScore(96);
+      document.writeln(`Nilai anda ${finalScore}`);
+
+      function isContains(array, searchValue) {
+        for (const element of array) {
+          console.info(`Ini element ${element}`);
+          if (element === searchValue) {
+            return true;
+          }
+        }
+        return false;
+      }
+
+      //  const array = [, 2, 3, 4, 5, 6, 7, 8, 6, 9, 10];
+      const array = [
+        "tahu",
+        "tempe",
+        "sayuran",
+        "pecel",
+        "gado-gado",
+        "martabak",
+      ];
+      const search = "pecel";
+      const found = isContains(array, search);
+      document.writeln(`<p>${found}</p>`);
+    </script>
+  </body>
+</html>
